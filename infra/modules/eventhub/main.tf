@@ -8,8 +8,7 @@ resource "azurerm_eventhub_namespace" "eh" {
 
 resource "azurerm_eventhub" "hub" {
   name                = "iot-events"
-  namespace_name      = azurerm_eventhub_namespace.eh.name
-  resource_group_name = var.resource_group_name
+  namespace_id        = azurerm_eventhub_namespace.eh.id  
   partition_count     = 2
   message_retention   = 1
 }

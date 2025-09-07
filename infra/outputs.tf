@@ -3,7 +3,8 @@ output "storage_account_name" {
 }
 
 output "eventhub_connection_string" {
-  value = module.eventhub.eventhub_connection_string  
+  value = module.eventhub.eventhub_connection_string
+  sensitive = true
 }
 
 output "databricks_workspace_url" {
