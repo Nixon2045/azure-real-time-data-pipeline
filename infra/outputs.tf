@@ -1,12 +1,11 @@
 output "storage_account_name" {
-  value = azurerm_storage_account.storage.name
+  value = module.datalake.storage_account_name
 }
 
 output "eventhub_connection_string" {
-  value = azurerm_eventhub_namespace.eh.default_primary_connection_string
-  sensitive = true
+  value = module.eventhub.eventhub_connection_string  
 }
 
 output "databricks_workspace_url" {
-  value = azurerm_databricks_workspace.dbr.workspace_url
+  value = module.databricks.databricks_workspace.dbr.workspace_url
 }
