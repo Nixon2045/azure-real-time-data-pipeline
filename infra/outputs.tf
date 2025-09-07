@@ -7,5 +7,5 @@ output "eventhub_connection_string" {
 }
 
 output "databricks_workspace_url" {
-  value = module.databricks.databricks_workspace.dbr.workspace_url
+  value = module.databricks.databricks_workspace_url
 }
