@@ -8,7 +8,7 @@ def main(event) -> None:
     message = event.get_body().decode('utf-8')
     logging.info(f"Evento recibido: {message}")
 
-    try:
+    try: 
         data = json.loads(message)
         save_to_adls(data)
     except Exception as e:
